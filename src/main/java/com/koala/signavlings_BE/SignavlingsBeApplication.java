@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SignavlingsBeApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SignavlingsBeApplication.class, args);
 	}
+
 
 }

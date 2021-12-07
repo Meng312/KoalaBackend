@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Entered the pre build phase ...
+      - chmod +x gradlew
+      - ./gradlew clean
+      - ./gradlew test
+  build:
+    commands:
+      - echo Entered the build phase ...
+      - ./gradlew clean
+      - ./gradlew build
+  post_build:
+    commands:
+      - echo Build completed successfully
+
+artifacts:
+  files:
+    - build/libs/signavlings_BE-1.0.0.jar
+  discard-paths: yes

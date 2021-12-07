@@ -1,20 +1,20 @@
 /**
  * The ProfileController class includes Get and Post method for all profiles
  *
- * @author Preeti Thorat
+ * @author Preeti Thorat Luise Loparev
  */
 package com.koala.signavlings_BE.profileController;
 
 import org.springframework.http.ResponseEntity;
-
-import java.net.URI;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 @RestController
+@CrossOrigin
 @RequestMapping("api/profile")
 public class ProfileController {
 
