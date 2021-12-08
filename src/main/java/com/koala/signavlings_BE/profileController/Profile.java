@@ -1,38 +1,44 @@
 /**
  * The Profile class contains the declaration of user profile attributes
  *
- * @author Preeti Thorat
+ * @author Preeti Thorat, Luise Loparev
  */
 
 package com.koala.signavlings_BE.profileController;
 
 
-import org.springframework.data.annotation.Id;
+//import org.springframework.data.annotation.Id;
+import javax.persistence.*;
 
+
+@Entity
+//@Table(name = "Profile")
 public class Profile {
 
-    private final Long profileID;
+    @Id
+    private Long id;
 
-    private final String name;
+    private String name;
 
-    private final String joiningMonth;
+    private String joiningMonth;
 
-    private final String location;
+    private String location;
 
-    private final String bio;
+    private String bio;
 
-    private final String role;
+    private String role;
+
 
 
     public Profile(
-            Long profileID,
+            Long id,
             String name,
             String joiningMonth,
             String location,
             String bio,
             String role
     ) {
-        this.profileID = profileID;
+        this.id = id;
         this.name = name;
         this.joiningMonth = joiningMonth;
         this.location = location;
@@ -41,38 +47,13 @@ public class Profile {
     }
 
 
-    @Id
-    public Long getProfileID() {
-        return profileID;
+    public Profile(){
+
     }
-
-
-    public String getName() {
-        return name;
-    }
-
-
-    public String getJoiningMonth() {
-        return joiningMonth;
-    }
-
-
-    public String getLocation() {
-        return location;
-    }
-
-    public String getBio() {
-        return bio;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
 
     public Profile updateWith(Profile profile) {
         return new Profile(
-                this.profileID,
+                this.id,
                 profile.name,
                 profile.joiningMonth,
                 profile.location,
@@ -81,4 +62,53 @@ public class Profile {
         );
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getJoiningMonth() {
+        return joiningMonth;
+    }
+
+    public void setJoiningMonth(String joiningMonth) {
+        this.joiningMonth = joiningMonth;
+    }
+
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }
