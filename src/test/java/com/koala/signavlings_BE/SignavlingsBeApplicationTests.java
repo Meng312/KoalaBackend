@@ -1,11 +1,9 @@
 package com.koala.signavlings_BE;
 
-import com.koala.signavlings_BE.profileController.ProfileController;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
-import org.skyscreamer.jsonassert.JSONCompareMode;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -34,6 +32,5 @@ class SignavlingsBeApplicationTests {
        JSONAssert.assertEquals(controller).isNotNull();
     }
  */
-
 
 }
