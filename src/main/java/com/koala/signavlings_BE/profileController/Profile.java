@@ -6,13 +6,10 @@
 
 package com.koala.signavlings_BE.profileController;
 
-
-//import org.springframework.data.annotation.Id;
 import javax.persistence.*;
 
 
 @Entity
-//@Table(name = "Profile")
 public class Profile {
 
     @Id
@@ -31,17 +28,6 @@ public class Profile {
     private String photo;
 
 
-/**
- *     "profileId": 20,
- *     "name": "John Doe",
- *     "email": null,
- *     "location": "Hamburg",
- *     "join date": "September 2021",
- *     "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
- *     "role": "Senior BE",
- *     "team": null,
- *     "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReBoB3uhPYwy6Vtp1PelM5Zyf8Ov5U98DANA&usqp=CAU"
-*/
     public Profile(
             Long id,
             String name,
